@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#nav-header {
+    background-color: #3E8EDE;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    padding: 25px 25px 8px;
+    transition: all 0.01s;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.fixed {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+}
+
+#nav-header h1 a{
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a:hover {
+    color: #414141
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(65, 65, 65, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+#colin {
+    margin: 15px;
+    width: 35%;
+    height: 50%;
+    border: 2px solid #414141;
+    border-radius: 15px;
+    float: left;
+}
+
+main {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400px;
+    color: #414141;
+    width: 60%;
+    float: right;
+}
+
+main h1{
+    text-align: center;
+    padding: 12px 0px;
+    color: #3E8EDE;
+    font-weight: 700px;
+}
+
+p.info {
+    text-align: left;
+    margin-bottom: 12px;
+    text-indent: 25px;
+    font-size: 16px;
+}
+
+.work {
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    color: #3E8EDE;
+}
+
+.job {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+ul.job.info {
+    color: #414141;
+    margin-left: 45px;
+}
+
+.job.info li {
+    color: #414141;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.job.date {
+    font-style: italic;
+    float: right;
+    padding-right: 25px; 
+}
+
+
+.socials {
+    display: flex;
+    float: left;
+    clear: left;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 35%;
+    margin: 15px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+#game {
+    display: inline-block;
+    width: 35%;
+    margin: 15px;
+    float: left;
+    border: 2px solid #414141;
+    border-radius: 5px;
+    color: #414141;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold; 
+}

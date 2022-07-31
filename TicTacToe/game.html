@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="tictactoe.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="tictactoe.js"></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <h1>Play Me in Tic-Tac-Toe!</h1>
+    
+    <div id="start-buttons">
+        <button class="start" onclick="startGame('X')">X</button>
+        <button class="start" onclick="startGame('O')">O</button>
+    </div>
+    <div id="game">
+        <table id="board">
+
+            <tr>
+                <td><button class="square" onclick="show(this, 0, 0)" type="button"></button></td>
+                <td><button class="square" onclick="show(this, 0, 1)" type="button"></button></td>
+                <td><button class="square" onclick="show(this, 0, 2)" type="button"></button></td>
+            </tr>
+            
+            <tr>
+                <td><button class="square" onclick="show(this, 1, 0)" type="button"></button></td>
+                <td><button class="square" onclick="show(this, 1, 1)" type="button"></button></td>
+                <td><button class="square" onclick="show(this, 1, 2)" type="button"></button></td>
+            </tr>
+            
+            <tr>
+                <td><button class="square" onclick="show(this, 2, 0)" type="button"></button></td>
+                <td><button class="square" onclick="show(this, 2, 1)" type="button"></button></td>
+                <td><button class="square" onclick="show(this, 2, 2)" type="button"></button></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="game-over">
+        <h1 id="message"></h1>
+        <button id="restart" onclick="restart()">Play Again?</button>
+    </div>
+    
+    <div id="about">
+        <h1> About this game</h1>
+        <p>Tic-Tac-Toe is a basic game that is as old as time. If you have never played it before first of all what rock were you living under.
+            Secondly, the goal of the game is to get three of your X's or O's in a row, column, or diagonal before the opponent does.
+        </p>
+        <p> In this version of the game you are playing a CPU (me) that is using a minimax algorithm to make its decisions. A minimax algorithm
+            is a backtracking algorithm that can be used on board games with simple endings. In Tic-Tac-Toe, the computer assigns a point value
+            to different states of the board. If the board is in a state where X has won, the value is +10. If it is in a state where O has won,
+            the value is -10. And if it is in a tie or unfinished state, the value is 0. To choose a move the algorithm goes through each
+            possible position it could play. It plays its letter and recursively evaluates the moves that would follow. It then returns the score
+            which would result from playing this move. After getting the score of each possible move, the CPU chooses the maximum score if playing
+            X's, or the minimum score if playing O's.
+        </p>
+    </div>
+</body>
+
+</htm

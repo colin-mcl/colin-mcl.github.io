@@ -75,8 +75,6 @@ main {
     font-family: "Montserrat", sans-serif;
     font-weight: 400px;
     color: #414141;
-    width: 60%;
-    float: right;
 }
 
 main h1{
@@ -94,9 +92,9 @@ p.info {
 }
 
 .work {
-    flex-flow: column nowrap;
-    justify-content: space-between;
     color: #3E8EDE;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .job {
@@ -140,6 +138,7 @@ ul.job.info {
 
 #game {
     display: inline-block;
+    clear: left;
     width: 35%;
     margin: 15px;
     float: left;

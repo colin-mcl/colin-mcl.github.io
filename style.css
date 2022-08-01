@@ -63,18 +63,68 @@ button {
 
 
 #colin {
-    margin: 15px;
-    width: 35%;
-    height: 50%;
     border: 2px solid #414141;
     border-radius: 15px;
-    float: left;
+    max-height: 800px;
 }
 
 main {
     font-family: "Montserrat", sans-serif;
     font-weight: 400px;
     color: #414141;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    }
+
+@media all and (max-width: 1000px) {
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        flex: auto;
+    }
+    
+    #lcolumn {
+        width: auto;
+        margin-bottom: 35px;
+        align-items: center;
+    }
+    #colin {
+        width: 100%;
+    }
+    
+    #rcolumn {
+        margin-left: 15px;
+    }
+    
+    button {
+        display: none;
+    }
+    
+    #nav-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links li {
+        padding: 0px 10px
+    }
+    
+    #nav-header * {
+        font-size: 16pt;
+    }
+    
+}
+
+@media all and (max-width: 400px) {
+    #nav-header *  {
+        font-size: 10pt;
+    }
+    #nav-header h1 a {
+        font-size: 20pt;
+    }
 }
 
 main h1{
@@ -91,10 +141,8 @@ p.info {
     font-size: 16px;
 }
 
-.work {
+h3.job, h4.job{
     color: #3E8EDE;
-    display: flex;
-    flex-flow: column nowrap;
 }
 
 .job {
@@ -102,7 +150,7 @@ p.info {
     display: inline-block;
 }
 
-ul.job.info {
+ul.job {
     color: #414141;
     margin-left: 45px;
 }
@@ -122,26 +170,17 @@ ul.job.info {
 
 .socials {
     display: flex;
-    float: left;
-    clear: left;
     justify-content: space-between;
     align-items: flex-end;
-    width: 35%;
-    margin: 15px;
 }
 
 .logo {
     width: 80px;
     height: 80px;
-    display: inline-block;
 }
 
 #game {
     display: inline-block;
-    clear: left;
-    width: 35%;
-    margin: 15px;
-    float: left;
     border: 2px solid #414141;
     border-radius: 5px;
     color: #414141;
@@ -149,4 +188,16 @@ ul.job.info {
     text-align: center;
     font-size: 18pt;
     font-weight: bold; 
+}
+
+#lcolumn {
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 35%;
+    max-width: 45%;
+    max-height: 1000px;
+}
+
+#lcolumn.socials, #game, #lcolumn img {
+    margin: 15px;
 }

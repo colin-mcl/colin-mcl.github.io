@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="myScript.js"></script>
+    <title>My Projects</title>
+
+</head>
+
+<body>
+    <div id="nav-header">
+        <h1><a href="main.html">Colin Mclaughlin</a></h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a><li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="Media/ColinMclaughlin.2024.ComputerScience.pdf">Resume</a></li>
+            </ul>
+        </nav>
+        <a href="mailto: colin.mclaughlin02@gmail.com" class="contact"><button>Contact</button></a>
+        
+    </div>
+
+    
+    <div id="projects">
+        
+        <h3>This page is meant to be a publicly available, running list and explanation of projects I have worked on. Most projects are viewable on <a href=https://github.com/colin-mcl>
+            my GitHub</a> Check back in as the list will only keep growing!</h3>
+        <a href="https://github.com/colin-mcl/colin-mcl.github.io"><h1 class = "project">Personal Website</h1></a>
+        <p class = "project info">I made this website as my first foray into a real web-development experience. In fact, my first
+            exposure to web-development came in <b>6th grade</b>, when my parents got me a book about HTML and CSS. I loved
+            building tiny, useless websites while in class or at home and this was the start of my love for Computer Science! </p>
+            
+        <p class = "project info"> While building this website I got a much better understanding of the principal concepts of Web
+            Development. I utilized CSS flexbox to create the layout of the pages and added media queries to ensure that the site
+            displays well on both mobile and desktop. I also got experience using JavaScript to add interactive features. The scrolling
+            header on top of the pages, as well as the Tic-Tac-Toe minigame, were both implemented using JS. </p>
+        <ul class = "project">Skills Involved:
+            <li class="skill">HTML</li>
+            <li class="skill">CSS</li>
+            <li class="skill">JavaScript</li>
+        </ul>
+        
+        <h1 class="project">Universal Machine</h1>
+        <p class="project info">The Universal Machine was a program that we created in COMP 40, one of the most challenging computer
+            science courses offered at Tufts. The task was to create a program that emulated the architecture and implementation of
+            a low-level computer. Our program would be fed input files in raw binary which could be converted to 32-bit instructions.
+            These instructions emulated assembly language and would perform basic operations on a set of memory registers. Some
+            operations included waiting for input, printing, basic arithmetic and halting the program. The most difficult requirement
+            was the ability to map new memory segments in which future instructions could be stored. With this implemented, complicated
+            programs could be run on our emulation by creating segments which stored entire programs, then loading that segment into the
+            instruction register.</p>
+        <p class="project info"> Implementing the Universal Machine helped us gain a much better understanding of how the execution of 
+            a computer program actually occurs. The managing of registers and memory created many challenges but with careful design and
+            rigorous unit testing we created a great emulation. After the initial project was finished we analyzed the performance of the UM
+            using Callgrind and KCachegrind. We were able to eliminate many code bottlenecks and create an 88% speedup in our program. Finally,
+            we used a macro version of the UM assembly language to create a working RPN calculator. </p>
+        
+        <ul class = "project">Skills Involved:
+            <li class="skill">C</li>
+            <li class="skill">Memory Management</li>
+            <li class="skill">Bit Manipulation</li>
+            <li class="skill">Modular Design</li>
+        </ul>
+        
+        <a href="https://github.com/colin-mcl/sudoku"><h1 class="project">Sudoku</h1></a>
+        <p class="project info">This is a command line C++ program which takes a Sudoku board formatted in text as input. The board
+            can have any number of squares filled in and the program will solve the remainder of the board using a backtracking algorithm.
+            The algorithm will recursively fill in every square on the board. It will attempt every solution possible at every square and check if
+            this leads to a solved board. If it does lead to a solution the algorithm continues. Otherwise, it removes that attempt, tries the
+            next possibility and so on. Instead of using an array of integers to store the numbers that are present in each row, column and square,
+            the program represents each row, column and square with a bitpacked integer. This means that the least-significant 9 bits of each integer
+            represent whether numbers 1-9 have been found yet. This reduces the memory required to store the numbers which have been found on a sudoku board
+            from about 7000 bits to just 864. While this does not have a significant impact on the program's runtime, our lessons in locality and performance
+            from COMP 40 incentived me to use this solution.</p>
+        <ul class = "project">Skills Involved:
+            <li class="skill">C++</li>
+            <li class="skill">Bit Manipulation</li>
+            <li class="skill">Modular Design</li>
+        </ul>
+            
+    </div>
+    
+</body>
+</html>
